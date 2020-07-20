@@ -1,0 +1,70 @@
+body {
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Caveat', cursive;
+    background-color: gold;
+}
+
+.container {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+}
+header {
+    font-size: 3em;
+    display: flex;
+}
+
+header img {
+    height: 160px;
+    width: 200px;
+    margin-top: 25px;
+}
+
+h3 {
+    display: inline-block;
+    font-size: 3em;
+    margin-right: 0.15em;
+
+}
+
+#speaker, #mic {
+    border-radius: 5px;
+}
+
+#speaker img, #mic img {
+    width: 2.5em;
+}
+
+input {
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    margin-right: 0.15em;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+#mic {
+    margin-right: 0.5em;
+}
+
+#submit {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+    border-radius: 5px;
+    display: block;
+}
+
+#answer-section {
+    width: 100%;
+}
+
+p {
+    width: 50%;
+    font-size: 3em;
+}
+
