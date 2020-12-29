@@ -1,7 +1,10 @@
-const synth = window.speechSynthesis;
-const recognition = new webkitSpeechRecognition();;
+// TODO: All non-happy path error handling and browser checks, Speech Synthesis and Recognition 
+// APIs were only available in Chrome at the time of development
 
-const wordList = ["irreplaceable", "formation", "buoy", "corruptible", "denouement"]
+const synth = window.speechSynthesis;
+const recognition = new webkitSpeechRecognition();
+
+const wordList = ["irreplaceable", "formation", "lemonade", "dangerously", "upgrade", "resentment"];
 
 let currentWord;
 
