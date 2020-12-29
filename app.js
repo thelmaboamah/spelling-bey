@@ -1,5 +1,10 @@
-// TODO: All non-happy path error handling and browser checks, Speech Synthesis and Recognition 
-// APIs were only available in Chrome at the time of development
+/*
+  I did this during a Hack and Tell session at RC. It uses Speech Synthesis
+  and Speech Recognition browser APIs, which were only available in Chrome at
+  the time of development
+*/
+
+// TODO: Browser checks since this will only work in Chrome
 
 const synth = window.speechSynthesis;
 const recognition = new webkitSpeechRecognition();
@@ -16,6 +21,8 @@ const spelledWord = document.getElementById("spelled-word");
 const correctWord = document.getElementById("correct-word");
 
 const startRecognition = () => {
+    if (!currentWord) return;
+
     recognition.start();
 }
 
@@ -38,7 +45,8 @@ const sayNextWord = () => {
 }
 
 const checkAnswer = (event, answer = input.value) => {
-    console.log(answer);
+    if (!answer) return;
+
     if (answer.toLowerCase() === currentWord) {
         spelledWord.style.color = "green";
         spelledWord.textContent = answer;
@@ -49,6 +57,8 @@ const checkAnswer = (event, answer = input.value) => {
         spellWord();
     }
     correctWord.textContent = currentWord;
+    currentWord = "";
+    input.value = "";
 }
 
 const spellWord = () => {
